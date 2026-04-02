@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="group_1">
+            <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+            <h1 class="name">Mono<span>Muse</span></h1>
+        </div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="exhibitions.html">Exhibitions</a>
+        </nav>
+            <div class="cta-group"></div>
+                <a href="tickets.html" class="buy-btn">BUY TICKETS</a>
+            </div>
+    </header>
+    
+    <table>
+        <tr>
+            <th>Ticket Type</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Adult</td>
+            <td>General admission for ages 18 and over. Under 18 free of charge.</td>
+            <td>$18</td>
+        </tr>
+        <tr>
+            <td>Student</td>
+            <td>Student ID required</td>
+            <td>$10</td>
+        </tr>
+        <tr>
+            <td>Member</td>
+            <td>Member ID required</td>
+            <td>$15</td>
+        </tr>
+    </table>
+
+    <form>
+        <label for="name">Name: (required)</label><br>
+        <input type="text" id="name"><br>
+
+        <label for="email">Email: (required)</label><br>
+        <input type="text" id="email"><br>
+
+        <label for="ticket_quantity">Ticket Quantity: (required)</label><br>
+        <input type="text" id="ticket_quantity"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <footer>© 2026 MonoMuse. All rights reserved.</footer>
+</body>
+</html>
