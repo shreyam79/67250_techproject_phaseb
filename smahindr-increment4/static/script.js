@@ -103,21 +103,35 @@ function ActiveNav() {
 ActiveNav();
 
 
-/* Read More & Read Less */
- // When the "Read Less" button is clicked
- $("#readLess").click(function(){ 
-    $("#longIntro").hide(); // Hide the long introduction text
-    $("#readLess").hide();  // Hide the "Read Less" button itself
-    $("#readMore").show();  // Show the "Read More" button  
+// /* Read More & Read Less */
+//  // When the "Read Less" button is clicked
+//  $("#readLess").click(function(){ 
+//     $("#longIntro").hide(); // Hide the long introduction text
+//     $("#readLess").hide();  // Hide the "Read Less" button itself
+//     $("#readMore").show();  // Show the "Read More" button  
 
-  });
+//   });
   
-// When the "Read More" button is clicked
-  $("#readMore").click(function(){
-    $("#longIntro").show();  // Show the long introduction text
-    $("#readLess").show();   // Show the "Read Less" button
-    $("#readMore").hide();   // Hide the "Read More" button  
-  });
+// // When the "Read More" button is clicked
+//   $("#readMore").click(function(){
+//     $("#longIntro").show();  // Show the long introduction text
+//     $("#readLess").show();   // Show the "Read Less" button
+//     $("#readMore").hide();   // Hide the "Read More" button  
+//   });
+$(document).ready(function() {
+    // All jQuery code goes inside here
+    $("#readLess").click(function(){ 
+        $("#longIntro").hide();
+        $("#readLess").hide();
+        $("#readMore").show();
+    });
+  
+    $("#readMore").click(function(){
+        $("#longIntro").show();
+        $("#readLess").show();
+        $("#readMore").hide();
+    });
+});
 
 //Show form
 function showForm() {
