@@ -1,0 +1,226 @@
+* {
+  padding: 5px;
+  margin: 5px;
+  background: #0b0b0c;
+  color:  #f5f5f7;
+}
+
+* {
+  padding: 5px;
+  margin: 5px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+#logo {
+  display: block;
+  height: 60px;
+  width: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-family: "Cormorant Garmond", serif;
+  margin: 0;
+}
+
+.name span {
+  font-style: italic;
+  font-family: "Cormorant Garmond", serif;
+  color: #c9a96e;
+}
+
+.group_1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #a1a1a1;
+  font-weight: 400;
+  font-size: 17px;
+  font-family: "DM Sans", serif;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  border-bottom: 2px solid #c9a96e;
+  padding-bottom: 4px;
+}
+
+#navselected {
+  color: #ffffff;
+  border-bottom-color: #c9a96e;
+  border-radius: 0;
+}
+
+.buy-btn {
+  background-color: #c4a474;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 25px;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 2px;
+}
+
+.top_header {
+  font-family: "Space Mono", serif;
+  color: #c4a474;
+}
+
+.where_art_meets {
+  font-family: "Cormorant Garmond", serif;
+  font-size: 50px;
+  font-weight: light;
+}
+
+.tomorrow {
+  font-family: "Cormorant Garmond", serif;
+  font-size: 50px;
+  color: #c4a474;
+  font-style: italic;
+  line-height: 0.5;
+}
+
+.buy_tickets {
+  background-color: #c4a474;
+  color: #000;
+  text-decoration: none;
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+}
+
+.current_exhibitions {
+  line-height: 1.5;
+  color: #ffffff;
+  font-family: "DM Sans", serif;
+  text-decoration: none;
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 2px;
+  border: 1px solid white;
+}
+
+.description {
+  font-family: "DM Sans", serif;
+}
+
+footer {
+  border-top: 1px solid rgba(245,245,247,.12);
+  padding: 18px 16px;
+  text-align: center;
+  color: rgba(245,245,247,.72);
+  }
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+form * {
+  margin: auto;
+  text-align: center;
+}
+
+.cta {
+  background-color: #e63946;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Explore & Exhibitions Pages */
+.explore {
+  font-family: "Cormorant Garmond", serif;
+  font-size: 45px;
+  font-weight: light;
+}
+
+.explore span {
+  font-family: "Cormorant Garmond", serif;
+  font-style: italic;
+  color: #c4a474;
+}
+
+.explore_description {
+  font-size: 18px;
+  font-family: "DM Sans", serif;
+  color: #8A8890;
+  font-weight: 400;
+}
+
+.milestones {
+  font-family: "Cormorant Garmond", serif;
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 50px;
+}
+
+.milestones_list {
+  padding-left: 70;
+}
+
+.milestones_list li {
+  color: #c4a474;
+  font-family: "DM Sans", serif;
+  font-weight: 250;
+}
+
+/* Cards Styling */
+
+.card-container {
+  display: flex;
+}
+
+.card1 {
+  border: white;
+}
+
+.card p{
+  font-size: 13px;
+  font-family: "Space Mono", serif;
+  color: #c4a474;
+  background-color: #18181F;
+  line-height: 0.5;
+}
+
+.card h4 {
+  font-size: 15px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: light;
+  background-color: #18181F;
+}
