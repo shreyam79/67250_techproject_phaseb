@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions - MonoMuse</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="group_1">
+                <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+                <h1 class="name">Mono<span>Muse</span></h1>
+            </div>
+        </header>
+        
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="membership.html">Membership</a>
+            <a href="tickets.html">Tickets</a>
+            <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+        </nav>
+        <main class="main">
+            <div class="explore_main">
+                <p class="top_header">DISCOVER</p>
+                <h2 class="explore">Explore<span>the Collection</span></h2>
+                <p class="explore_description">Browse works spanning digital art, interactive installation, generative media,<br>
+                and traditional forms - all united by the intersection of creativity and <br>
+                technology.
+                </p>
+            </div>
+            
+
+            <!-- Image Gallery -->
+            <div class="gallery">
+                <button class="gallery-arrow gallery-prev" onclick="changeSlide(-1)">&#8592;</button>
+                <div class="gallery-track">
+                    <div class="gallery-slide active">
+                        <img src="img1.jpg">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="img2.webp">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="img3.jpg">
+                    </div>
+                </div>
+                <button class="gallery-arrow gallery-next" onclick="changeSlide(1)">&#8594;</button>
+            </div>
+
+            <!--Cards-->
+            <div class="card-container">
+                <div class="card">
+                    <div class="color-block" style="background-color: #212D42;"></div>
+                    <div class="card-text-area">
+                        <p>DIGITAL</p>
+                        <h4>Synthetic Landscapes</h4>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="color-block" style="background-color: #2F1E69;"></div>
+                    <div class="card-text-area">
+                        <p>SCULPTURE</p>
+                        <h4>Recursive Architectures</h4>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="color-block" style="background-color: #164755;"></div>
+                    <div class="card-text-area">
+                        <p>MIXED MEDIA</p>
+                        <h4>Signal & Noise</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="color-block" style="background-color: #5B4412;"></div>
+                    <div class="card-text-area">
+                        <p>PHOTOGRAPHY</p>
+                        <h4>Thermal Memories</h4>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="color-block" style="background-color: #1C1C24;"></div>
+                    <div class="card-text-area">
+                        <p>DIGITAL</p>
+                        <h4>Void Patterns</h4>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="color-block" style="background-color: #441E1C;"></div>
+                    <div class="card-text-area">
+                        <p>PAINTING</p>
+                        <h4>Crimson Epoch</h4>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>

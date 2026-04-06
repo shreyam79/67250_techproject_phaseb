@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="../static/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets - MonoMuse</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="group_1">
+                <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+                <h1 class="name">Mono<span>Muse</span></h1>
+            </div>
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="membership.html">Membership</a>
+            <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+        </nav>
+
+        <main class="main">
+
+            <!-- Ticket price table -->
+            <table class="ticket-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>General Admission (18+)</td>
+                    <td>Access to all exhibitions</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Students</td>
+                    <td>Valid student ID required</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Members</td>
+                    <td>Valid membership ID required</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>General Admission (Under 18)</td>
+                    <td>Access to all exhibitions</td>
+                    <td>$18</td>
+                </tr>
+            </table>
+
+            <h4 class="headingg">April 2026 Schedule</h4>
+            <hr class="line-break">
+
+            <table class="ticket-table schedule-table">
+                <tr>
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>Availability</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>April 5, 2026</td>
+                    <td>Sunday</td>
+                    <td class="available">Available</td>
+                    <td><button class="buy-now-btn" onclick="showForm('2026-04-05', 'April 5, 2026')">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 10, 2026</td>
+                    <td>Friday</td>
+                    <td class="available">Available</td>
+                    <td><button class="buy-now-btn" onclick="showForm('2026-04-10', 'April 10, 2026')">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 12, 2026</td>
+                    <td>Sunday</td>
+                    <td class="unavailable">Sold Out</td>
+                    <td><button class="buy-now-btn" disabled>Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 18, 2026</td>
+                    <td>Saturday</td>
+                    <td class="available">Available</td>
+                    <td><button class="buy-now-btn" onclick="showForm('2026-04-18', 'April 18, 2026')">Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 20, 2026</td>
+                    <td>Monday</td>
+                    <td class="unavailable">Sold Out</td>
+                    <td><button class="buy-now-btn" disabled>Buy Now</button></td>
+                </tr>
+                <tr>
+                    <td>April 25, 2026</td>
+                    <td>Saturday</td>
+                    <td class="available">Available</td>
+                    <td><button class="buy-now-btn" onclick="showForm('2026-04-25', 'April 25, 2026')">Buy Now</button></td>
+                </tr>
+            </table>
+
+            <!-- Checkout form -->
+            <div class="form" id="checkoutForm">
+
+                <input type="hidden" id="selectedDate">
+                <input type="hidden" id="selectedDateLabel">
+
+                <h4 class="headingg" id="formDateHeading">Tickets for —</h4>
+                <hr class="line-break">
+
+                <h4 class="headingg" style="margin-top: 32px;">Ticket Type & Quantity</h4>
+                <hr class="line-break">
+
+                <!-- Ticket type & Quantity -->
+                <div class="form-field" style="margin: 16px 30px;">
+
+                    <div class="ticket-qty-row">
+                        <p class="ticket-label">General Admission (18+)</p>
+                        <input type="number" class="qty-input" id="qty-general" placeholder="0" min="0" max="10" oninput="updateTotal()">
+                    </div>
+
+                    <div class="ticket-qty-row">
+                        <p class="ticket-label">Student</p>
+                        <input type="number" class="qty-input" id="qty-student" placeholder="0" min="0" max="10" oninput="updateTotal()">
+                    </div>
+
+                    <div class="ticket-qty-row">
+                        <p class="ticket-label">Member</p>
+                        <input type="number" class="qty-input" id="qty-member" placeholder="0" min="0" max="10" oninput="updateTotal()">
+                    </div>
+
+                    <div class="ticket-qty-row">
+                        <p class="ticket-label">General Admission (Under 18)</p>
+                        <input type="number" class="qty-input" id="qty-under18" placeholder="0" min="0" max="10" oninput="updateTotal()">
+                    </div>
+
+                </div>
+
+                <!-- Auto price -->
+                <div class="form-field" style="margin: 16px 30px;">
+                    <p class="text1">TOTAL PRICE</p>
+                    <p id="totalPrice" style="font-size: 24px; font-family: 'Cormorant Garamond', serif; color: #c4a474; margin: 4px 0;">$0</p>
+                    <p id="totalTickets" style="font-size: 13px; font-family: 'DM Sans', sans-serif; color: white; margin: 2px 0;">0 tickets × $18</p>
+                </div>
+
+                <h4 class="headingg" id="heading_2">Contact Information</h4>
+                <hr class="line-break">
+
+                <div class="contact_info">
+                    <div class="name2">
+                        <div>
+                            <p class="text1">FIRST NAME (Required)</p>
+                            <input type="text" class="small-input-1" id="firstName">
+                        </div>
+                        <div>
+                            <p class="text1">LAST NAME (Required)</p>
+                            <input type="text" class="small-input-1" id="lastName">
+                        </div>
+                    </div>
+
+                    <div class="email">
+                        <p class="text1">EMAIL ADDRESS (Required)</p>
+                        <input type="email" class="long-input" id="emailInput">
+                    </div>
+
+                    <div class="phone">
+                        <p class="text1">ZIP CODE (Optional)</p>
+                        <input type="text" class="long-input" id="zipCode" placeholder="15213" maxlength="5">
+                    </div>
+
+                    <div style="margin: 16px 0; display: flex; align-items: center; gap: 10px;">
+                        <input type="checkbox" id="mailingList" style="width: auto; display: inline;">
+                        <label for="mailingList" class="text1" style="margin: 0;">Join our mailing list for exhibition updates</label>
+                    </div>
+                </div>
+
+                <!-- Error messages -->
+                <div id="formErrors" style="margin: 10px 30px; color: #e05a5a; font-family: 'DM Sans', serif; font-size: 14px; display: none;"></div>
+
+                <div class="complete_purchase">
+                    <button class="complete_purchase_input" onclick="placeOrder()">PLACE ORDER</button>
+                </div>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>

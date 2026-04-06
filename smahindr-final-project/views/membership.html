@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="../static/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - MonoMuse</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="group_1">
+                <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+                <h1 class="name">Mono<span>Muse</span></h1>
+            </div>
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="membership.html">Membership</a>
+            <a href="tickets.html">Tickets</a>
+            <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+        </nav>
+
+        <main class="main">
+
+            <!-- Hero -->
+            <p class="top_header">SUPPORT THE ARTS</p>
+            <h2 class="explore">Become a <span>Member</span></h2>
+            <p class="explore_description">
+                Your membership directly supports MonoMuse's mission to make art and technology accessible to everyone.
+                Enjoy exclusive benefits while helping us build the future of creative culture.
+            </p>
+
+            <!-- Membership tiers -->
+            <div class="membership-tiers">
+
+                <div class="membership-card">
+                    <p class="membership-label">INDIVIDUAL</p>
+                    <h3 class="membership-price">$75 <span class="membership-per">/ year</span></h3>
+                    <ul class="membership-benefits">
+                        <li>Unlimited free general admission</li>
+                        <li>10% discount at the museum shop</li>
+                        <li>Member-only newsletter</li>
+                        <li>Early access to exhibition announcements</li>
+                    </ul>
+                    <button class="membership-btn" onclick="showMemberForm('individual')">JOIN NOW</button>
+                </div>
+
+                <div class="membership-card membership-card-featured">
+                    <p class="membership-label">FAMILY</p>
+                    <h3 class="membership-price">$140 <span class="membership-per">/ year</span></h3>
+                    <ul class="membership-benefits">
+                        <li>Admission for 2 adults + children under 18</li>
+                        <li>15% discount at the museum shop</li>
+                        <li>4 guest passes per year</li>
+                        <li>Invitations to member preview nights</li>
+                        <li>Member-only newsletter</li>
+                    </ul>
+                    <button class="membership-btn" onclick="showMemberForm('family')">JOIN NOW</button>
+                </div>
+
+                <div class="membership-card">
+                    <p class="membership-label">PATRON</p>
+                    <h3 class="membership-price">$300 <span class="membership-per">/ year</span></h3>
+                    <ul class="membership-benefits">
+                        <li>All Family benefits</li>
+                        <li>Recognition in exhibition programs</li>
+                        <li>Private curator-led tour (once/year)</li>
+                        <li>Invitation to annual gala</li>
+                        <li>20% discount at the museum shop</li>
+                    </ul>
+                    <button class="membership-btn" onclick="showMemberForm('patron')">JOIN NOW</button>
+                </div>
+
+            </div>
+
+            <!-- Donation section -->
+            <div class="donation-section">
+                <h2 class="explore">Make a <span>Donation</span></h2>
+                <p class="explore_description">
+                    Not ready for a membership? A one-time donation of any amount helps us continue programming,
+                    maintain exhibitions, and support emerging artists.
+                </p>
+                <p class="donation-custom-label">Enter an amount:</p>
+                <input type="number" id="customDonation" class="long-input donation-input" placeholder="$0" min="1">
+                <button class="buy_tickets" style="margin-top: 16px;" onclick="submitDonation()">DONATE</button>
+            </div>
+
+            <!-- Membership form -->
+            <div class="membership-form" id="membershipForm">
+                <h4 class="headingg" id="memberFormTitle">Membership Sign Up</h4>
+                <hr class="line-break">
+
+                <div class="contact_info">
+                    <div class="name2">
+                        <div>
+                            <p class="text1">FIRST NAME (Required)</p>
+                            <input type="text" class="small-input-1" id="mem-firstname">
+                        </div>
+                        <div>
+                            <p class="text1">LAST NAME (Required)</p>
+                            <input type="text" class="small-input-1" id="mem-lastname">
+                        </div>
+                    </div>
+                    <div class="email">
+                        <p class="text1">EMAIL ADDRESS (Required)</p>
+                        <input type="email" class="long-input" id="mem-email">
+                    </div>
+                    <div class="phone">
+                        <p class="text1">SELECTED TIER</p>
+                        <input type="text" class="long-input" id="mem-tier" readonly>
+                    </div>
+                </div>
+
+                <div id="mem-error" class="error-msg" style="display:none; color:#e05a5a; margin: 10px 30px;"></div>
+
+                <div class="complete_purchase" style="margin-top: 24px;">
+                    <button class="complete_purchase_input" onclick="submitMembership()">COMPLETE MEMBERSHIP</button>
+                </div>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>

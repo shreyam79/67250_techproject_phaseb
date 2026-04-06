@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="../static/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - MonoMuse</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="group_1">
+                <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+                <h1 class="name">Mono<span>Muse</span></h1>
+            </div>
+        </header>
+
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="membership.html">Membership</a>
+            <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+        </nav>
+
+        <main class="main">
+
+            <!-- No order fallback -->
+            <div class="no-order" id="noOrder">
+                <p style="font-family:'DM Sans',sans-serif; color:#8A8890;">No order found. <a href="tickets.html" style="color:#c4a474;">Return to tickets</a>.</p>
+            </div>
+
+            <!-- Confirmation content -->
+            <div class="confirm-wrap" id="confirmWrap" style="display:none;">
+
+                <div class="confirm-badge">
+                    <span class="checkmark">✓</span>
+                    <span>ORDER CONFIRMED</span>
+                </div>
+
+                <p class="confirm-section-label">VISIT DETAILS</p>
+
+                <div class="confirm-row">
+                    <span class="conf-key">Date</span>
+                    <span class="conf-val" id="conf-date">—</span>
+                </div>
+
+                <hr class="confirm-divider">
+                <p class="confirm-section-label">ORDER SUMMARY</p>
+
+                <table class="breakdown-table">
+                    <thead>
+                        <tr>
+                            <th>TICKET TYPE</th>
+                            <th>QTY</th>
+                            <th>SUBTOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="breakdownBody"></tbody>
+                </table>
+
+                <div class="total-row">
+                    <span class="total-label">TOTAL CHARGED</span>
+                    <span class="total-amount" id="conf-total">—</span>
+                </div>
+
+                <div class="confirm-actions">
+                    <a href="../index.html" class="btn-primary">Return to Home</a>
+                    <a href="tickets.html" class="btn-secondary">Buy More Tickets</a>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p id="copyYear"></p>
+        </footer>
+    </div>
+</body>
+</html>

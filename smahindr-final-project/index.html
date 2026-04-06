@@ -1,0 +1,82 @@
+<!--Citations
+MonoMuse Logo: AI Generated
+Gallery Image #1: https://www.islands.com/img/gallery/a-bustling-yet-underrated-connecticut-city-is-home-to-americas-oldest-public-art-museum/l-intro-1733933490.jpg
+Gallery Image #2: https://www.shutterstock.com/image-photo/boston-usa-july-27-2024-600nw-2499230049.jpg
+Gallery Image #3: https://www.discoverphl.com/wp-content/uploads/2023/10/PMA-interior-Photo-by-J-Ryan-for-the-PHLCVB-11-scaled.jpg
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./static/style.css">
+    
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script src="./static/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="author" content="Shreya Mahindroo">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="group_1">
+                <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo">
+                <h1 class="name">Mono<span>Muse</span></h1>
+            </div>
+        </header>
+        
+        <nav class="nav_bar">
+            <a href="index.html">Home</a>
+            <a href="views/about.html">About</a>
+            <a href="views/exhibitions.html">Exhibitions</a>
+            <a href="views/membership.html">Membership</a>
+            <a href="views/tickets.html">Tickets</a>
+            <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+        </nav>              
+    
+    <main class="main">
+        <p class="top_header">NOW OPEN!</p>
+        <h2 class="where_art_meets" id="greeting">Greeting</h2>
+        <h2 class="tomorrow">Welcome to MonoMuse!</h2>
+        <p></p>
+</p>
+        <button onclick="window.location.href='views/tickets.html';" class="buy_tickets">BUY TICKETS</button>
+        <button onclick="window.location.href='views/exhibitions.html';" class="current_exhibitions">CURRENT EXHIBITIONS -></button>
+
+        <!--Short and long content sections-->
+        <p id="shortIntro">MonoMuse is a contemporary museum dedicated to exploring the intersection of art, technology, and human creativity.</p>
+        <p id="longIntro">
+            Through immersive exhibitions, interactive installations, and rotating collections, MonoMuse invites visitors to discover <br> how digital innovation is transforming the way we create, experience, and understand art. Whether you are a first-time
+            <br>visitor or a returning member, our exhibitions offer new perspectives on the role of technology in culture and everyday
+            <br>life. Plan your visit to experience cutting-edge exhibitions, hands-on experiences, and events designed to inspire curiosity
+            <br>and creativity.
+        </p>
+        <button id="readMore">Read More</button>
+        <button id="readLess">Read Less</button>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+</div>
+</div>
+</body>
+</html>
