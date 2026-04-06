@@ -70,5 +70,9 @@ function addYear() {
     }
 }
 
-greeting(hour)
-addYear()
+document.addEventListener("DOMContentLoaded", function () {
+    var now = new Date();
+    var hour = now.getHours();
+    greeting(hour);
+    addYear();
+});
