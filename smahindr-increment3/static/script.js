@@ -66,7 +66,7 @@ function addYear() {
     var element = document.getElementById("copyYear");
 
     if (element) {
-        element.innerHTML = year
+        element.innerHTML = "© " + year + " MonoMuse. All rights reserved."
     }
 }
 
